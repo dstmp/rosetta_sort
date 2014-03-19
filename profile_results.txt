@@ -1,0 +1,121 @@
+danielle@borges:~/sort$ ls -lah 1_000.txt
+  -rwxr-xr-x  1 danielle danielle  98K Mar 18 13:16 1_000.txt
+
+danielle@borges:~/sort$ for i in {1..5}; do ./profile.sh 1000.txt; done
+  0.04u 0.00s 0.09r 8232kB 46%cpu python ./python/psort.py --algorithm heapsort
+  0.03u 0.00s 0.08r 8232kB 42%cpu python ./python/psort.py --algorithm quicksort
+  0.01u 0.00s 0.02r 2040kB 40%cpu ./golang/gsort -algorithm=heapsort
+  0.00u 0.00s 0.01r 2028kB 35%cpu ./golang/gsort -algorithm=quicksort
+
+  0.03u 0.00s 0.09r 8236kB 41%cpu python ./python/psort.py --algorithm heapsort
+  0.03u 0.00s 0.09r 8232kB 39%cpu python ./python/psort.py --algorithm quicksort
+  0.00u 0.00s 0.01r 2032kB 42%cpu ./golang/gsort -algorithm=heapsort
+  0.00u 0.00s 0.01r 2048kB 45%cpu ./golang/gsort -algorithm=quicksort
+
+  0.02u 0.01s 0.09r 8232kB 41%cpu python ./python/psort.py --algorithm heapsort
+  0.03u 0.00s 0.10r 8232kB 38%cpu python ./python/psort.py --algorithm quicksort
+  0.00u 0.00s 0.01r 2040kB 46%cpu ./golang/gsort -algorithm=heapsort
+  0.00u 0.00s 0.01r 2040kB 29%cpu ./golang/gsort -algorithm=quicksort
+
+  0.03u 0.00s 0.10r 8232kB 42%cpu python ./python/psort.py --algorithm heapsort
+  0.03u 0.00s 0.10r 8232kB 41%cpu python ./python/psort.py --algorithm quicksort
+  0.00u 0.00s 0.01r 2040kB 46%cpu ./golang/gsort -algorithm=heapsort
+  0.00u 0.00s 0.01r 2040kB 38%cpu ./golang/gsort -algorithm=quicksort
+
+  0.02u 0.01s 0.09r 8232kB 40%cpu python ./python/psort.py --algorithm heapsort
+  0.03u 0.00s 0.09r 8232kB 41%cpu python ./python/psort.py --algorithm quicksort
+  0.00u 0.00s 0.01r 2028kB 42%cpu ./golang/gsort -algorithm=heapsort
+  0.00u 0.00s 0.02r 2048kB 26%cpu ./golang/gsort -algorithm=quicksort
+
+
+
+danielle@borges:~/sort$ ls -lah 10_000.txt
+  -rwxr-xr-x  1 danielle danielle 977K Mar 18 13:14 10_000.txt
+
+danielle@borges:~/sort$ for i in {1..5}; do ./profile.sh 10_000.txt; done
+  0.11u 0.01s 0.21r 9424kB 57%cpu python ./python/psort.py --algorithm heapsort
+  0.07u 0.00s 0.15r 9420kB 48%cpu python ./python/psort.py --algorithm quicksort
+  0.01u 0.00s 0.04r 6520kB 45%cpu ./golang/gsort -algorithm=heapsort
+  0.01u 0.00s 0.04r 6524kB 40%cpu ./golang/gsort -algorithm=quicksort
+
+  0.11u 0.00s 0.24r 9420kB 48%cpu python ./python/psort.py --algorithm heapsort
+  0.08u 0.00s 0.17r 9420kB 49%cpu python ./python/psort.py --algorithm quicksort
+  0.00u 0.01s 0.03r 6520kB 46%cpu ./golang/gsort -algorithm=heapsort
+  0.01u 0.00s 0.04r 6524kB 40%cpu ./golang/gsort -algorithm=quicksort
+
+  0.10u 0.01s 0.20r 9420kB 56%cpu python ./python/psort.py --algorithm heapsort
+  0.07u 0.00s 0.12r 9420kB 61%cpu python ./python/psort.py --algorithm quicksort
+  0.01u 0.00s 0.04r 6520kB 45%cpu ./golang/gsort -algorithm=heapsort
+  0.01u 0.00s 0.04r 6520kB 38%cpu ./golang/gsort -algorithm=quicksort
+
+  0.10u 0.00s 0.19r 9420kB 57%cpu python ./python/psort.py --algorithm heapsort
+  0.06u 0.00s 0.14r 9420kB 46%cpu python ./python/psort.py --algorithm quicksort
+  0.02u 0.00s 0.04r 6520kB 48%cpu ./golang/gsort -algorithm=heapsort
+  0.01u 0.00s 0.04r 6520kB 36%cpu ./golang/gsort -algorithm=quicksort
+
+  0.10u 0.00s 0.19r 9424kB 59%cpu python ./python/psort.py --algorithm heapsort
+  0.07u 0.00s 0.15r 9420kB 49%cpu python ./python/psort.py --algorithm quicksort
+  0.02u 0.00s 0.04r 6516kB 46%cpu ./golang/gsort -algorithm=heapsort
+  0.01u 0.00s 0.04r 6520kB 38%cpu ./golang/gsort -algorithm=quicksort
+
+
+
+danielle@borges:~/sort$ ls -lah 100_000.txt
+  -rwxr-xr-x  1 danielle danielle 9.6M Mar 18 13:30 100_000.txt
+
+danielle@borges:~/sort$ for i in {1..5}; do ./profile.sh 100_000.txt; done
+  1.08u 0.01s 1.29r 42236kB 84%cpu python ./python/psort.py --algorithm heapsort
+  0.48u 0.03s 0.73r 42236kB 70%cpu python ./python/psort.py --algorithm quicksort
+  0.21u 0.04s 0.34r 57188kB 73%cpu ./golang/gsort -algorithm=heapsort
+  0.16u 0.02s 0.29r 57188kB 65%cpu ./golang/gsort -algorithm=quicksort
+
+  1.02u 0.03s 1.21r 41780kB 87%cpu python ./python/psort.py --algorithm heapsort
+  0.45u 0.03s 0.59r 41916kB 81%cpu python ./python/psort.py --algorithm quicksort
+  0.22u 0.02s 0.36r 57188kB 69%cpu ./golang/gsort -algorithm=heapsort
+  0.15u 0.02s 0.26r 57188kB 66%cpu ./golang/gsort -algorithm=quicksort
+
+  1.13u 0.01s 1.33r 41780kB 86%cpu python ./python/psort.py --algorithm heapsort
+  0.47u 0.01s 0.60r 41916kB 81%cpu python ./python/psort.py --algorithm quicksort
+  0.22u 0.03s 0.37r 57188kB 68%cpu ./golang/gsort -algorithm=heapsort
+  0.14u 0.03s 0.26r 57192kB 68%cpu ./golang/gsort -algorithm=quicksort
+
+  1.01u 0.03s 1.19r 41916kB 87%cpu python ./python/psort.py --algorithm heapsort
+  0.45u 0.03s 0.59r 41780kB 81%cpu python ./python/psort.py --algorithm quicksort
+  0.23u 0.02s 0.37r 57188kB 68%cpu ./golang/gsort -algorithm=heapsort
+  0.15u 0.02s 0.26r 57188kB 67%cpu ./golang/gsort -algorithm=quicksort
+
+  1.03u 0.02s 1.20r 41780kB 88%cpu python ./python/psort.py --algorithm heapsort
+  0.46u 0.02s 0.57r 42236kB 85%cpu python ./python/psort.py --algorithm quicksort
+  0.23u 0.02s 0.37r 57196kB 68%cpu ./golang/gsort -algorithm=heapsort
+  0.14u 0.03s 0.25r 57192kB 67%cpu ./golang/gsort -algorithm=quicksort
+
+
+
+danielle@borges:~/sort$ ls -lah 500_000.txt
+  -rwxr-xr-x  1 danielle danielle  48M Mar 18 13:20 500_000.txt
+
+danielle@borges:~/sort$ for i in {1..5}; do ./profile.sh 500_000.txt; done
+  6.56u 0.05s 7.31r 181176kB 90%cpu python ./python/psort.py --algorithm heapsort
+  2.70u 0.09s 3.04r 181176kB 91%cpu python ./python/psort.py --algorithm quicksort
+  1.54u 0.13s 1.94r 263028kB 86%cpu ./golang/gsort -algorithm=heapsort
+  0.82u 0.14s 1.35r 263028kB 71%cpu ./golang/gsort -algorithm=quicksort
+
+  6.63u 0.08s 7.33r 181308kB 91%cpu python ./python/psort.py --algorithm heapsort
+  2.77u 0.09s 3.06r 181020kB 93%cpu python ./python/psort.py --algorithm quicksort
+  1.60u 0.13s 1.95r 263028kB 88%cpu ./golang/gsort -algorithm=heapsort
+  0.85u 0.11s 1.21r 263028kB 79%cpu ./golang/gsort -algorithm=quicksort
+
+  6.45u 0.08s 7.14r 181636kB 91%cpu python ./python/psort.py --algorithm heapsort
+  2.94u 0.07s 3.13r 181180kB 96%cpu python ./python/psort.py --algorithm quicksort
+  1.53u 0.13s 1.87r 263032kB 88%cpu ./golang/gsort -algorithm=heapsort
+  0.83u 0.13s 1.22r 263028kB 78%cpu ./golang/gsort -algorithm=quicksort
+
+  6.55u 0.09s 7.21r 180184kB 92%cpu python ./python/psort.py --algorithm heapsort
+  2.76u 0.06s 2.94r 181632kB 96%cpu python ./python/psort.py --algorithm quicksort
+  1.55u 0.11s 1.87r 263028kB 88%cpu ./golang/gsort -algorithm=heapsort
+  0.82u 0.12s 1.12r 263032kB 84%cpu ./golang/gsort -algorithm=quicksort
+
+  6.48u 0.08s 7.06r 181308kB 93%cpu python ./python/psort.py --algorithm heapsort
+  2.83u 0.11s 3.10r 180188kB 94%cpu python ./python/psort.py --algorithm quicksort
+  1.59u 0.12s 1.92r 263028kB 89%cpu ./golang/gsort -algorithm=heapsort
+  0.87u 0.12s 1.22r 263036kB 82%cpu ./golang/gsort -algorithm=quicksort
