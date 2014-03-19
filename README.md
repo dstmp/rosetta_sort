@@ -15,21 +15,13 @@ Command line sort utility that uses either heapsort or quicksort, in both Python
 
 ##Running the tests
 
-Go unit tests, run from the ./golang subdirectory -
+First, follow the installation instructions. Then, from the main directory of this repository:
 
-1. `export GOPATH=$PWD`
-1. `go test daniellesucher.com/heapsort/`
-1. `go test daniellesucher.com/quicksort/`
-
-Python unit tests, run from the ./python subdirectory -
-
-1. `python heapsort.py`
-1. `python quicksort.py`
-
+`./test.sh`
 
 ##Usage
 
-From the main directory of this repo:
+From the main directory of this repository:
 
 Python:
 
