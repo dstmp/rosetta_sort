@@ -24,8 +24,6 @@ func main() {
   }
 
   if len(bytes) == 0 {
-    err = errors.New("You need to pass in something to sort!")
-    fmt.Fprint(os.Stderr, err)
     return
   }
 

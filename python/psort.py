@@ -15,7 +15,6 @@ def main():
 
   sortable = sys.stdin.readlines()
   if len(sortable) == 0:
-    print('You need to pass in something to sort!', file=sys.stderr)
     return
 
   if args.algorithm == 'heapsort':
