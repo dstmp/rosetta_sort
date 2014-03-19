@@ -25,12 +25,12 @@ From the main directory of this repository:
 
 Python:
 
-`python ./python/psort.py --algorithm heapsort < input.txt`
+`python ./python/psort.py --algorithm heapsort < input.txt`  
 `python ./python/psort.py --algorithm quicksort < input.txt`
 
 Go:
 
-`./golang/gsort -algorithm=heapsort < input.txt`
+`./golang/gsort -algorithm=heapsort < input.txt`  
 `./golang/gsort -algorithm=quicksort < input.txt`
 
 ##Profiling
