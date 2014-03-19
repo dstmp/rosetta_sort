@@ -37,7 +37,7 @@ func main() {
   } else if *algorithmPtr == "quicksort" {
     quicksort.QuickSort(sortable)
   } else {
-    err = errors.New("Please choose either heapsort or quicksort.")
+    err = errors.New("The only valid algorithm options are heapsort or quicksort.")
     fmt.Fprint(os.Stderr, err)
     return
   }
