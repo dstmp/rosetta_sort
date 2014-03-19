@@ -47,9 +47,9 @@ memory (resident set size) than the Python processes. That the reverse
 is true for smaller files indicates that Python may have more of a
 memory overhead, just for starting up.
 
-As file sizes get larger, the percentage of time spent in basic overhead
-(as opposed to actually spent sorting data) becomes smaller. This also
-explains why CPU usage gets higher as file sizes get larger.
+As file sizes get larger, the percentage of time spent in overhead (such
+as loading the standard libraries, as opposed to actually spent sorting data)
+becomes smaller. This also explains why CPU usage is higher with larger files.
 
 Despite the greater memory usage by the Go implementations, it appears
 that the Go versions run faster than their Python counterparts, both
